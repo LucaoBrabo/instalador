@@ -1,0 +1,69 @@
+
+2020/07/28 12:11:59 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "reportCampaign/read". in /Library/WebServer/Documents/MBilling_7/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Library/WebServer/Documents/MBilling_7/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('reportCampaign/...')
+#1 /Library/WebServer/Documents/MBilling_7/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/MBilling_7/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/MBilling_7/index.php/reportCampaign/read
+---
+2020/07/28 12:12:07 [error] [php] include(CampaignReport.php): failed to open stream: No such file or directory (/Library/WebServer/Documents/MBilling_7/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /Library/WebServer/Documents/MBilling_7/protected/controllers/CampaignReportController.php(30): spl_autoload_call()
+#1 /Library/WebServer/Documents/MBilling_7/yii/framework/web/CWebApplication.php(281): CampaignReportController->init()
+#2 /Library/WebServer/Documents/MBilling_7/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#3 /Library/WebServer/Documents/MBilling_7/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Library/WebServer/Documents/MBilling_7/index.php(12): CWebApplication->run()
+REQUEST_URI=/MBilling_7/index.php/campaignReport
+in /Library/WebServer/Documents/MBilling_7/protected/controllers/CampaignReportController.php (30)
+in /Library/WebServer/Documents/MBilling_7/index.php (12)
+2020/07/28 12:12:10 [error] [php] include(CampaignReport.php): failed to open stream: No such file or directory (/Library/WebServer/Documents/MBilling_7/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /Library/WebServer/Documents/MBilling_7/protected/controllers/CampaignReportController.php(30): spl_autoload_call()
+#1 /Library/WebServer/Documents/MBilling_7/yii/framework/web/CWebApplication.php(281): CampaignReportController->init()
+#2 /Library/WebServer/Documents/MBilling_7/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#3 /Library/WebServer/Documents/MBilling_7/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Library/WebServer/Documents/MBilling_7/index.php(12): CWebApplication->run()
+REQUEST_URI=/MBilling_7/index.php/campaignReport/read
+in /Library/WebServer/Documents/MBilling_7/protected/controllers/CampaignReportController.php (30)
+in /Library/WebServer/Documents/MBilling_7/index.php (12)
+2020/07/28 12:12:27 [error] [php] include(CampaignReport.php): failed to open stream: No such file or directory (/Library/WebServer/Documents/MBilling_7/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /Library/WebServer/Documents/MBilling_7/protected/controllers/CampaignReportController.php(30): spl_autoload_call()
+#1 /Library/WebServer/Documents/MBilling_7/yii/framework/web/CWebApplication.php(281): CampaignReportController->init()
+#2 /Library/WebServer/Documents/MBilling_7/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#3 /Library/WebServer/Documents/MBilling_7/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Library/WebServer/Documents/MBilling_7/index.php(12): CWebApplication->run()
+REQUEST_URI=/MBilling_7/index.php/campaignReport/read
+in /Library/WebServer/Documents/MBilling_7/protected/controllers/CampaignReportController.php (30)
+in /Library/WebServer/Documents/MBilling_7/index.php (12)
+2020/07/28 12:12:28 [error] [php] include(CampaignReport.php): failed to open stream: No such file or directory (/Library/WebServer/Documents/MBilling_7/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /Library/WebServer/Documents/MBilling_7/protected/controllers/CampaignReportController.php(30): spl_autoload_call()
+#1 /Library/WebServer/Documents/MBilling_7/yii/framework/web/CWebApplication.php(281): CampaignReportController->init()
+#2 /Library/WebServer/Documents/MBilling_7/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#3 /Library/WebServer/Documents/MBilling_7/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Library/WebServer/Documents/MBilling_7/index.php(12): CWebApplication->run()
+REQUEST_URI=/MBilling_7/index.php/campaignReport/read
+in /Library/WebServer/Documents/MBilling_7/protected/controllers/CampaignReportController.php (30)
+in /Library/WebServer/Documents/MBilling_7/index.php (12)
+2020/07/28 12:12:47 [error] [php] include(CampaignReport.php): failed to open stream: No such file or directory (/Library/WebServer/Documents/MBilling_7/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /Library/WebServer/Documents/MBilling_7/protected/controllers/CampaignReportController.php(30): spl_autoload_call()
+#1 /Library/WebServer/Documents/MBilling_7/yii/framework/web/CWebApplication.php(281): CampaignReportController->init()
+#2 /Library/WebServer/Documents/MBilling_7/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#3 /Library/WebServer/Documents/MBilling_7/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Library/WebServer/Documents/MBilling_7/index.php(12): CWebApplication->run()
+REQUEST_URI=/MBilling_7/index.php/campaignReport/read
+in /Library/WebServer/Documents/MBilling_7/protected/controllers/CampaignReportController.php (30)
+in /Library/WebServer/Documents/MBilling_7/index.php (12)
+2020/07/28 12:29:36 [error] [exception.CHttpException.404] CHttpException: O sistema não foi capaz de encontrar a ação "index" solicitada. in /Library/WebServer/Documents/MBilling_7/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Library/WebServer/Documents/MBilling_7/yii/framework/web/CController.php(270): CController->missingAction('')
+#1 /Library/WebServer/Documents/MBilling_7/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /Library/WebServer/Documents/MBilling_7/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('campaignReport')
+#3 /Library/WebServer/Documents/MBilling_7/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /Library/WebServer/Documents/MBilling_7/index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/MBilling_7/index.php/campaignReport
+---

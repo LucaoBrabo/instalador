@@ -186,9 +186,9 @@ fi
 PHP_INI=$(php -i | grep /.+/php.ini -oE)
 
 mkdir -p /var/www/html
-
+cd /var/www/html
 git clone https://github.com/LucaoBrabo/mbilling.git
-cd /var/www/html/mbilling
+cd mbilling
 
 tar xzf MagnusBilling-current.tar.gz
 

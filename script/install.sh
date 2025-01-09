@@ -1224,7 +1224,7 @@ echo **** CONFIGURACAOES CARTEIRO ****
 
 sudo chmod 777 /var/www/html/mbilling/tmp/
 
-mysql -u root -p"$password" -e "
+mysql -u root -p"$senha" -e "
 USE mbilling;
 
 INSERT INTO pkg_module (id, text, module, icon_cls, id_module, priority) VALUES

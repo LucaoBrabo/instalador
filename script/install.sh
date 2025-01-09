@@ -14,7 +14,7 @@ echo "                _/ |                                           _/ |  ";
 echo "               |__/                                           |__/   ";
 echo "                                                                     ";
 echo "======================= VOIP SYSTEM FOR LINUX =======================";
-echo
+echo $senha
 
 sleep 3
 
@@ -1226,32 +1226,6 @@ sudo chmod 777 /var/www/html/mbilling/tmp/
 
 mysql -u root -p"$senha" -e "
 USE mbilling;
-
-INSERT INTO pkg_module (id, text, module, icon_cls, id_module, priority) VALUES
-(13, 't(\'Voice Broadcasting\')', NULL, 'x-fa fa-arrow-right', NULL, 8),
-(41, 't(\'Campaigns\')', 'campaign', 'x-fa fa-desktop', 13, 1),
-(42, 't(\'Polls\')', 'campaignpoll', 'x-fa fa-desktop', 13, 4),
-(43, 't(\'Phonebooks\')', 'phonebook', 'x-fa fa-desktop', 13, 2),
-(44, 't(\'Phonenumbers\')', 'phonenumber', 'x-fa fa-desktop', 13, 3),
-(49, 't(\'SMS\')', 'sms', 'x-fa fa-desktop', 13, 7),
-(57, 't(\'Polls Reports\')', 'campaignpollinfo', 'x-fa fa-desktop', 13, 5),
-(62, 't(\'Restrict Phone\')', 'campaignrestrictphone', 'x-fa fa-desktop', 13, 6),
-(63, 't(\'Quick Campaign\')', 'campaignsend', 'x-fa fa-desktop', 13, 8),
-(103, 't(\'Campaigns DashBoard\')', 'campaigndashboard', 'x-fa fa-desktop', 13, 11),
-(105, 't(\'Campaign Report\')', 'campaignreport', 'x-fa fa-desktop', 13, 12);
-
-INSERT INTO pkg_group_module (id_group, id_module, action, show_menu, createShortCut, createQuickStart) VALUES
-(1, 13, 'crud', 1, 1, 1),
-(1, 41, 'crud', 1, 1, 1),
-(1, 42, 'crud', 1, 1, 1),
-(1, 43, 'crud', 1, 1, 1),
-(1, 44, 'crud', 1, 1, 1),
-(1, 49, 'crud', 1, 1, 1),
-(1, 57, 'crud', 1, 1, 1),
-(1, 62, 'crud', 1, 1, 1),
-(1, 63, 'crud', 1, 1, 1),
-(1, 103, 'crud', 1, 1, 1),
-(1, 105, 'crud', 1, 1, 1);
 
 UPDATE pkg_configuration SET config_value = CASE
     WHEN ID = 1 THEN 'BRL'

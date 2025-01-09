@@ -1,5 +1,6 @@
 #!/bin/bash
 clear
+senha=$1
 echo
 echo
 echo
@@ -15,6 +16,8 @@ echo "               |__/                                           |__/   ";
 echo "                                                                     ";
 echo "======================= VOIP SYSTEM FOR LINUX =======================";
 echo $senha
+
+
 
 sleep 3
 

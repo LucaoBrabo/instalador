@@ -1,6 +1,7 @@
 #!/bin/bash
 clear
 senha=$1
+ip=$2
 echo
 echo
 echo
@@ -1246,7 +1247,8 @@ INSERT INTO pkg_api (id_user, status, api_key, api_secret, api_restriction_ips, 
 
 INSERT INTO pkg_provider (provider_name, creationdate, description, credit, credit_control) VALUES 
 ('SIP', NOW(), '', 0.00000, 0),
-('DISCADORA', NOW(), '', 0.00000, 0);
+('DISCADORA', NOW(), '', 0.00000, 0),
+('ILIMITADO', NOW(), '', 0.00000, 0);
 
 INSERT INTO pkg_trunk (id_provider, failover_trunk, trunkcode, host, fromdomain, trunkprefix, 
 providertech, providerip, removeprefix, secondusedreal, call_answered, call_total, creationdate, addparameter, inuse, maxuse, status, 
@@ -1263,15 +1265,21 @@ VALUES
 (2, NULL, 'DISCADORA', '177.11.49.104', '177.11.49.104', '515151', 
 'sip', 'DISCADORA', '', 0, 0, 0, NOW(), '', NULL, -1, 1, NULL, '', '', 
 'g729,gsm,opus,alaw,ulaw', '', 'no', 'billing', 'RFC2833', 'port,invite', 'force_rport,comedia', 'yes', 
+'peer', 'all', '', 0, '', 0, 0, '', '', '', '', 5060, 'no', '', 0, '', '', ''),
+(3, NULL, 'ILIMITADO', '177.11.49.104', '177.11.49.104', '515151', 
+'sip', 'ILIMITADO', '', 0, 0, 0, NOW(), '', NULL, -1, 1, NULL, '', '', 
+'g729,gsm,opus,alaw,ulaw', '', 'no', 'billing', 'RFC2833', 'port,invite', 'force_rport,comedia', 'yes', 
 'peer', 'all', '', 0, '', 0, 0, '', '', '', '', 5060, 'no', '', 0, '', '', '');
 
 INSERT INTO pkg_trunk_group (name, type, description, weight) VALUES 
 ('SIP', 1, '', ''),
-('DISCADORA', 1, '', '');
+('DISCADORA', 1, '', ''),
+('ILIMITADO', 1, '', '');
 
 INSERT INTO pkg_trunk_group_trunk (id_trunk_group, id_trunk, weight) VALUES 
 (1, 1, 1),
-(2, 2, 1);
+(2, 2, 1),
+(3, 3, 1);
 
 INSERT INTO pkg_prefix (prefix, destination) VALUES ('55', 'BRL');
 
@@ -1279,11 +1287,16 @@ INSERT INTO pkg_prefix_length (code, length) VALUES ('55', 2);
 
 INSERT INTO pkg_plan (id_user, name, lcrtype, creationdate, removeinterprefix, signup, portabilidadeMobile, portabilidadeFixed, ini_credit, techprefix, play_audio, tariff_limit) VALUES 
 (1, 'SIP', 0, NOW(), 1, 0, 0, 0, 0.00000, '', 1, 3),
-(1, 'DISCADORA', 0, NOW(), 1, 0, 0, 0, 0.00000, '', 1, 3);
+(1, 'DISCADORA', 0, NOW(), 1, 0, 0, 0, 0.00000, '', 1, 3),
+(1, 'ILIMITADO', 0, NOW(), 1, 0, 0, 0, 0.00000, '', 1, 3);
 
 INSERT INTO pkg_rate (id_plan, id_trunk_group, id_prefix, rateinitial, initblock, billingblock, connectcharge, disconnectcharge, additional_grace, minimal_time_charge, package_offer, status, dialprefix, destination) VALUES 
 (1, 1, 1, 0.200000, 30, 6, 0.00000, 0.00000, '0', 0, 0, 1, NULL, NULL),
-(2, 2, 1, 0.100000, 30, 6, 0.00000, 0.00000, '0', 0, 0, 1, NULL, NULL);
+(2, 2, 1, 0.100000, 30, 6, 0.00000, 0.00000, '0', 0, 0, 1, NULL, NULL),
+(3, 3, 1, 0.000000, 1, 1, 0.00000, 0.00000, '0', 0, 0, 1, NULL, NULL);
 "
+
+cd /usr/src/instalador/script
+VAR1=$ip php script.php
 
 reboot

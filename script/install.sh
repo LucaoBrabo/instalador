@@ -1291,8 +1291,8 @@ INSERT INTO pkg_plan (id_user, name, lcrtype, creationdate, removeinterprefix, s
 (1, 'ILIMITADO', 0, NOW(), 1, 0, 0, 0, 0.00000, '', 1, 3);
 
 INSERT INTO pkg_rate (id_plan, id_trunk_group, id_prefix, rateinitial, initblock, billingblock, connectcharge, disconnectcharge, additional_grace, minimal_time_charge, package_offer, status, dialprefix, destination) VALUES 
-(1, 1, 1, 0.100000, 30, 6, 0.00000, 0.00000, '0', 0, 0, 1, NULL, NULL),
-(2, 2, 1, 0.200000, 30, 6, 0.00000, 0.00000, '0', 0, 0, 1, NULL, NULL),
+(1, 1, 1, 0.200000, 30, 6, 0.00000, 0.00000, '0', 0, 0, 1, NULL, NULL),
+(2, 2, 1, 0.100000, 30, 6, 0.00000, 0.00000, '0', 0, 0, 1, NULL, NULL),
 (3, 3, 1, 0.000000, 1, 1, 0.00000, 0.00000, '0', 0, 0, 1, NULL, NULL);
 "
 

@@ -451,7 +451,7 @@ open_files_limit=500000
 [embedded]
 
 [mariadb]
-
+bind-address = 0.0.0.0
 [mariadb-10.1]
 " > ${MYSQL_CONFIG}
 fi;
@@ -1228,6 +1228,8 @@ echo **** CONFIGURACAOES CARTEIRO ****
 
 sudo chmod 777 /var/www/html/mbilling/tmp/
 
+
+
 mysql -u root -p"$senha" -e "
 USE mbilling;
 
@@ -1296,7 +1298,26 @@ INSERT INTO pkg_rate (id_plan, id_trunk_group, id_prefix, rateinitial, initblock
 (3, 3, 1, 0.000000, 1, 1, 0.00000, 0.00000, '0', 0, 0, 1, NULL, NULL);
 "
 
-cd /usr/src/instalador/script
-VAR1=$ip php script.php
+mysql -u root -p"$senha" -e "
+CREATE USER 'sms_top_plataforma'@'%' IDENTIFIED BY 'JmpoS4HG39iU7G';
+GRANT ALL PRIVILEGES ON mbilling.* TO 'sms_top_plataforma'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+"
+sudo netstat -plnt | grep 3306
+
+sudo apt update
+sudo apt install ufw
+sudo ufw enable
+systemctl stop iptables
+systemctl disable iptables
+sudo systemctl enable ufw
+sudo ufw allow proto tcp from any to any port 1:65535
+sudo ufw allow proto udp from any to any port 1:65535
+
+
+ip_address=$(hostname -I | awk '{print $1}')
+
+
+VAR1=$ip_address php /usr/src/instalador/script
 
 reboot
